@@ -1,6 +1,17 @@
-@import url('https://fonts.cdnfonts.com/css/st-remona-neue');
-
 .home-layout {
     height: 100vh;
-    background-color: #069A8E;
+    background-color: var(--home--screen-bg);
+    overflow: hidden;
+}
+
+.MuiTab-root {
+    color: var(--home-screen-text-color) !important;
+}
+
+.Mui-selected {
+    color: black !important;
+}
+
+.MuiTab-root:hover {
+    color: black !important;
 }

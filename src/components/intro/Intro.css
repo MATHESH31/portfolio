@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/st-remona-neue');
+
 
 .intro-layout {
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: center;
     height: 100vh;
     font-size: 22rem;
-    font-family: 'ST Remona Neue', sans-serif;
-    color: #A1E3D8;
-    background: #005555;
+    font-family: 'Belanosima', sans-serif;
+    color: var(--intro-text-color);
+    background: var(--intro-bg-color);
 }
