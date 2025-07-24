@@ -1,8 +1,15 @@
-@import url('https://fonts.cdnfonts.com/css/belanosima');
+@import url('https://fonts.cdnfonts.com/css/swomun-serif-slant');
 
 :root{
     --intro-bg-color: #1B3C53;
     --intro-text-color: #D2C1B6;
-    --home--screen-bg: #456882;
+    --home-screen-bg: #456882;
     --home-screen-text-color: #F9F3EF;
+    --font-family: 'Swomun Serif', sans-serif;
+    --secondary-font-family: 'Swomun Serif Slant', sans-serif;
+}
+
+#root {
+    background-color: var(--intro-bg-color);
+    height: 100vh;
 }
