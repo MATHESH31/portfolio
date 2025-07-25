@@ -27,9 +27,13 @@
     font-weight: 500;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    backdrop-filter: blur(4px);
 }
 
-.app-bar-list a:hover {
-    color: #000;
+.active {
+    border-radius: 2vw;
+    background-color: blanchedalmond;
+}
+
+.active a {
+    color: var(--intro-bg-color);
 }

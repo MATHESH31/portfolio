@@ -1,13 +1,17 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './components/about/About.jsx'
+import Skills from './components/skills/Skills.jsx'
+import Projects from './components/projects/Projects.jsx'
+import Contact from './components/contact/Contact.jsx'
 
 const App = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<About />} />
-                {/* <Route path="/home" element={<Home />} /> */}
+                <Route path="/about" element={<About />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </Router>
     )
