@@ -1,0 +1,62 @@
+.contact-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-portrait {
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 25vw;
+    border-radius: 50vw;
+    position: absolute;
+    top: 25vh;
+    left: 12.5vw;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 20vh;
+    right: 5vw;
+}
+
+.git {
+    margin: 0;
+    font-size: 5rem;
+    font-family: var(--font-family);
+    color: var(--home-screen-text-color);
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 2vh;
+}
+
+.mail {
+    position: absolute;
+    top: 20vh;
+}
+
+.mail {
+    font-size: 3rem;
+    font-family: var(--font-family);
+    color: var(--home-screen-text-color);
+    background: rgba(255, 255, 255, 0.20);
+    box-shadow: 0.5vw 1vh 20px rgba(0, 0, 0, 0.2);
+    border-radius: 3vw;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.also {
+    margin: 0;
+    font-size: 5rem;
+    font-family: var(--font-family);
+    color: var(--home-screen-text-color);
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 37vh;
+}
