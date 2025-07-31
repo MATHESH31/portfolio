@@ -1,4 +1,3 @@
-import { Link } from '@mui/joy';
 import AppBar from '../app-bar/AppBar'
 import './Contact.css';
 import { GitHub, Instagram } from '@mui/icons-material';
@@ -22,8 +21,6 @@ const Contact = () => {
         color: 'var(--home-screen-text-color)',
     }
 
-
-
     return (
         <div>
             <AppBar />
@@ -35,10 +32,10 @@ const Contact = () => {
                         mathezh1@gmail.com
                     </a>
                     <h1 className='also'>ALSO CHECK</h1>
-                    <a href='https://github.com/MATHESH31'>
+                    <a href='https://github.com/MATHESH31' target="_blank">
                         <GitHub sx={gitStyle} />
                     </a>
-                    <a href='https://www.instagram.com/_m.a.t.h.e.z.h_/'>
+                    <a href='https://www.instagram.com/_m.a.t.h.e.z.h_/' target="_blank">
                         <Instagram sx={instaStyle}/>
                     </a>
                 </div>

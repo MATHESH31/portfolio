@@ -1,0 +1,110 @@
+[
+    {
+        "title": "International Electrotechnical Commission",
+        "type": "Professional",
+        "description": "Engineered a translation layer to facilitate seamless data transmission to third-party HES systems.",
+        "techStack": ["Java", "Spring Webflux", "MongoDB", "Kafka", "Docker"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "Rule Engine",
+        "type": "Professional",
+        "description": "Designed an evaluator to process and validate incoming data, reducing error rates by 15%.",
+        "techStack": ["Java", "Spring Webflux", "MongoDB", "Kafka", "Docker", "Redis"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "National Feeder Monitoring System",
+        "type": "Professional",
+        "description": "Optimized feeder data transmission workflows, ensuring compliance with government standards.",
+        "techStack": ["Java", "Spring Webflux", "MongoDB"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "Billing Integration",
+        "type": "Professional",
+        "description": "Engineered a translation layer to facilitate seamless data transmission to third-party HES systems.",
+        "techStack": ["Java", "Spring Boot", "MongoDB", "OracleSql", "Docker"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "Portfolio Website Replication",
+        "type": "Personal",
+        "description": "Replicated a figma web portfolio design using plain HTML and CSS to strengthen understanding of layout and styling fundamentals",
+        "techStack": ["HTML", "CSS"],
+        "linkedInLink": "",
+        "githubLink": ["https://github.com/MATHESH31/portfolio-replication"],
+        "url": ""
+    },
+    {
+        "title": "Spring WebFlux Application for Data Setup",
+        "type": "Personal",
+        "description": "Designed and developed a microservice using Spring WebFlux to validate Excel files and return a JSON response. Used internally by teams for project data setup.",
+        "techStack": ["Java", "Spring Webflux", "MongoDB", "Docker", "Apache POI"],
+        "linkedInLink": "",
+        "githubLink": ["https://github.com/MATHESH31/nfms-device-setup-api"],
+        "url": ""
+    },
+    {
+        "title": "UI for Data Setup Application",
+        "type": "Personal",
+        "description": "Built a simple ReactJS UI with two cards for uploading Excel files, selecting a date, and viewing API responses. Concurrently learning core React concepts through hands-on development.",
+        "techStack": ["JavaScript", "Reactjs", "Material UI", "Docker"],
+        "linkedInLink": "",
+        "githubLink": ["https://github.com/MATHESH31/nfms-device-setup-ui"],
+        "url": ""
+    },
+    {
+        "title": "Personal Portfolio",
+        "type": "Personal",
+        "description": "",
+        "techStack": ["JavaScript", "Reactjs", "Material UI", "Joy UI"],
+        "linkedInLink": "",
+        "githubLink": ["https://github.com/MATHESH31/portfolio"],
+        "url": ""
+    },
+    {
+        "title": "Simple GenAI Travel Planner",
+        "type": "Personal",
+        "description": "",
+        "techStack": ["JavaScript", "Reactjs", "Material UI"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "Boolean evaluation in string",
+        "type": "POC",
+        "description": "Developed a Boolean evaluator leveraging Java string expressions for logic processing.",
+        "techStack": ["Java", "Spring Webflux"],
+        "linkedInLink": "",
+        "githubLink": ["https://github.com/MATHESH31/boolean-evaluator"],
+        "url": ""
+    },
+    {
+        "title": "Dynamic runtime connection establishment in SQL Database",
+        "type": "POC",
+        "description": "Implemented dynamic SQL database connections supporting multiple runtime configurations.",
+        "techStack": ["Java", "Spring Boot", "OracleSql", "Prometheus", "Grafana"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    },
+    {
+        "title": "Big Data Storage",
+        "type": "POC",
+        "description": "Created hadoop file system and stored data from a huge data collection from mongoDB and data retrieval from the file system using Spark.",
+        "techStack": ["Java", "Spring Boot", "Apache Hadoop", "Apache Spark", "Apache Hudi", "Apache Parquet"],
+        "linkedInLink": "",
+        "githubLink": [""],
+        "url": ""
+    }
+]

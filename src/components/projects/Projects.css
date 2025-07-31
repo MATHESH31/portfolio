@@ -1,0 +1,77 @@
+.projects-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 11vh;
+}
+
+.projects-tabs {
+    position: absolute;
+    top: 0.5vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    border-radius: 2vw;
+    margin: 0;
+    padding: 1vw;
+    width: 25vw;
+}
+
+.projects-tabs ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projects-tabs li {
+    padding: 0.5vw;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0.2vw 1vh 20px rgba(0, 0, 0, 0.2);
+    border-radius: 2vw;
+    font-size: 1.2rem;
+    /* font-family: var(--font-family); */
+    color: var(--intro-text-color);
+    cursor: pointer;
+}
+
+.projects-container {
+    position: absolute;
+    top: 13vh;
+    margin: 0 5vw 0 5vw;
+    /* font-family: var(--font-family); */
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 1vw;
+    height: 35vh;
+    padding: 0 1vw 0 1vw;
+    text-wrap: wrap;
+    color: var(--intro-text-color);
+    padding: 1vw;
+}
+
+.card h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 1vh 0;
+}
+
+.card span {
+    font-size: 1rem;
+    background-color: var(--home-screen-text-color);
+    border-radius: 2vw;
+}
+
+.tech-stack .MuiChip-filled {
+    margin: 0 0 1.2vh 0.4vw;
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
