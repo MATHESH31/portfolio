@@ -5,7 +5,7 @@
         "description": "Engineered a translation layer to facilitate seamless data transmission to third-party HES systems.",
         "techStack": ["Java", "Spring Webflux", "MongoDB", "Kafka", "Docker"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": [],
         "url": ""
     },
     {
@@ -14,7 +14,7 @@
         "description": "Designed an evaluator to process and validate incoming data, reducing error rates by 15%.",
         "techStack": ["Java", "Spring Webflux", "MongoDB", "Kafka", "Docker", "Redis"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": [],
         "url": ""
     },
     {
@@ -23,16 +23,16 @@
         "description": "Optimized feeder data transmission workflows, ensuring compliance with government standards.",
         "techStack": ["Java", "Spring Webflux", "MongoDB"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": [],
         "url": ""
     },
     {
-        "title": "Billing Integration",
+        "title": "TNEB Billing Integration",
         "type": "Professional",
         "description": "Engineered a translation layer to facilitate seamless data transmission to third-party HES systems.",
         "techStack": ["Java", "Spring Boot", "MongoDB", "OracleSql", "Docker"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": [],
         "url": ""
     },
     {
@@ -42,10 +42,10 @@
         "techStack": ["HTML", "CSS"],
         "linkedInLink": "",
         "githubLink": ["https://github.com/MATHESH31/portfolio-replication"],
-        "url": ""
+        "url": "https://github.com/MATHESH31/portfolio-replication"
     },
     {
-        "title": "Spring WebFlux Application for Data Setup",
+        "title": "Spring Application for Data Setup",
         "type": "Personal",
         "description": "Designed and developed a microservice using Spring WebFlux to validate Excel files and return a JSON response. Used internally by teams for project data setup.",
         "techStack": ["Java", "Spring Webflux", "MongoDB", "Docker", "Apache POI"],
@@ -77,7 +77,7 @@
         "description": "",
         "techStack": ["JavaScript", "Reactjs", "Material UI"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": ["https://github.com/MATHESH31/travel-planning-app"],
         "url": ""
     },
     {
@@ -95,7 +95,7 @@
         "description": "Implemented dynamic SQL database connections supporting multiple runtime configurations.",
         "techStack": ["Java", "Spring Boot", "OracleSql", "Prometheus", "Grafana"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": ["https://github.com/MATHESH31/nonreactive.billing"],
         "url": ""
     },
     {
@@ -104,7 +104,10 @@
         "description": "Created hadoop file system and stored data from a huge data collection from mongoDB and data retrieval from the file system using Spark.",
         "techStack": ["Java", "Spring Boot", "Apache Hadoop", "Apache Spark", "Apache Hudi", "Apache Parquet"],
         "linkedInLink": "",
-        "githubLink": [""],
+        "githubLink": [
+            "https://github.com/MATHESH31/hadoop-spark-hudi",
+            "https://github.com/MATHESH31/hudi"
+        ],
         "url": ""
     }
 ]
