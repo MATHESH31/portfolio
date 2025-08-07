@@ -3,8 +3,8 @@
     top: 3vh;
     left: 50vw;
     transform: translateX(-50%);
-    width: 50vw;
-    padding: 12px 20px;
+    width: 40vw;
+    padding: 8px 20px;
     border-radius: 20vw;
     background: rgba(255, 255, 255, 0.20);
     box-shadow: 0.2vw 1vh 20px rgba(0, 0, 0, 0.2);
@@ -19,7 +19,7 @@
     padding: 0;
 }
 
-.app-bar-list a {
+.tab {
     color: var(--intro-text-color);
     text-decoration: none;
     font-family: var(--font-family);
@@ -31,9 +31,5 @@
 
 .active {
     border-radius: 2vw;
-    background-color: blanchedalmond;
-}
-
-.active a {
-    color: var(--intro-bg-color);
+    background-color: var(--intro-bg-color);
 }

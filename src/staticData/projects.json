@@ -65,7 +65,7 @@
     {
         "title": "Personal Portfolio",
         "type": "Personal",
-        "description": "",
+        "description": "A clean personal website built to showcase my skills, projects, and experience. Designed with a minimalist UI, it reflects my professional identity and technical proficiency.",
         "techStack": ["JavaScript", "Reactjs", "Material UI", "Joy UI"],
         "linkedInLink": "",
         "githubLink": ["https://github.com/MATHESH31/portfolio"],
@@ -74,9 +74,9 @@
     {
         "title": "Simple GenAI Travel Planner",
         "type": "Personal",
-        "description": "",
+        "description": "A web app that suggests travel destinations based on your current mood. It uses the Gemini API to understand how you're feeling and gives personalized place recommendations to match your vibe.",
         "techStack": ["JavaScript", "Reactjs", "Material UI"],
-        "linkedInLink": "",
+        "linkedInLink": "https://www.linkedin.com/posts/mathesh-nagendran-4a636097_reactjs-genai-geminiapi-activity-7358504631716446208-oJYb?utm_source=share&utm_medium=member_desktop&rcm=ACoAABSE_L4BLrIGvLRznLZOYETNewBijTwrlek",
         "githubLink": ["https://github.com/MATHESH31/travel-planning-app"],
         "url": ""
     },

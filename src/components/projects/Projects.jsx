@@ -13,16 +13,6 @@ const Projects = () => {
         setSection(tab)
     }
 
-    // const handleCardChange = (e) => {
-    //     e.currentTarget.style.display = 'none';
-    //     e.currentTarget.nextSibling.style.display = 'block';
-    // }
-
-    // const handleCardRevert = (e) => {
-    //     e.currentTarget.style.display = 'block';
-    //     e.currentTarget.nextSibling.style.display = 'none';
-    // }
-
     return (
         <div>
             <AppBar />

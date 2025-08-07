@@ -12,28 +12,28 @@
     left: 50vw;
     transform: translateX(-50%);
     border-radius: 2vw;
-    margin: 0;
-    padding: 1vw;
+    margin: 4vh 0 0 0;
     width: 25vw;
 }
 
 .projects-tabs ul {
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    justify-content: center;
     align-items: center;
-    justify-content: space-around;
 }
 
 .projects-tabs li {
-    padding: 0.5vw;
+    width: 7vw;
+    padding: 0.5vh;
+    text-align: center;
     background: rgba(255,255,255,0.2);
     box-shadow: 0.2vw 1vh 20px rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
     font-size: 1.2rem;
-    /* font-family: var(--font-family); */
+    font-family: var(--para-font-family);
     color: var(--intro-text-color);
     cursor: pointer;
 }
