@@ -7,7 +7,7 @@
 
 .legend {
     position: absolute;
-    top: 10vh;
+    top: 8vh;
     left: 2vw;
     display: flex;
     flex-direction: column;
@@ -42,84 +42,20 @@
     color: var(--intro-text-color);
     margin: 0;
     padding: 0.5rem;
-    font-family: var(--font-family);
+    font-family: var(--para-font-family);
     background: rgba(255, 255, 255, 0.20);
     box-shadow: 0.5vw 1vh 20px rgba(0, 0, 0, 0.2);
     border-radius: 2vw;
 }
 
 .skills-grid h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     margin: 0;
-    padding: 0.6rem;
+    padding: 0.6vh 0 0.6vh 0;
     border-radius: 2vw;
     color: var(--intro-text-color);
-    font-family: var(--font-family);
+    font-family: var(--para-font-family);
     background: rgba(255, 255, 255, 0.20);
     box-shadow: 0.5vw 1vh 20px rgba(0, 0, 0, 0.2);
-}
-
-.arrows-container {
-    height: 55vh;
-    width: 80vw;
-    position: absolute;
-    top: 21vh;
-}
-
-.left-arrow-container {
-    position: absolute;
-    top: 0.2vh;
-    left: 0.2vw;
-    height: 20vh;
-    width: 40vw;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 90%);
-}
-
-.left-up-line {
-    border: 0.13rem solid var(--home-screen-text-color);
-    height: 7vh;
-    width: 0vw;
-    position: absolute;
-    right: 3vw
-}
-
-.left-line {
-    border: 0.13rem solid var(--home-screen-text-color);
-    height: 0vh;
-    width: 22vw;
-    position: absolute;
-    top: 7vh;
-    right: 3vw;
-}
-
-.left-down-line {
-    border: 0.13rem solid var(--home-screen-text-color);
-    width: 0vw;
-    height: 10vh;
-    position: absolute;
-    top: 7vh;
-    left: 15vw
-}
-
-.invert {
-    transform: scaleX(-1);
-    left: 40vw;
-}
-
-.middle-line {
-    border: 0.13rem solid var(--home-screen-text-color);
-    position: absolute;
-    top: 0.2vh;
-    left: 40vw;
-    height: 58vh;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 90%);
-}
-
-.experienced {
-    border: 2px solid #1976D2
-}
-
-.learning {
-    border: 2px solid #D43E32
 }

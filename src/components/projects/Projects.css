@@ -46,6 +46,8 @@
 
 .card-container {
     position: relative;
+    overflow-y: scroll;
+    overflow: hidden;
 }
 
 .card {

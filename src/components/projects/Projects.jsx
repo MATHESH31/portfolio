@@ -9,8 +9,12 @@ import { GitHub, Link, LinkedIn } from '@mui/icons-material';
 const Projects = () => {
     const [section, setSection] = React.useState('Professional');
 
-    const handleTabChange = (tab) => {
-        setSection(tab)
+    const handleTabChange = (tab, e) => {
+        setSection(tab);
+        e.parentNode.getElementByTagName('li').array.forEach(element => {
+            element.removeProperty('border')
+        });
+        e.target.style.border = '2px solid var(--home-screen-text-color)';
     }
 
     return (
@@ -19,9 +23,9 @@ const Projects = () => {
             <div className='projects-layout'>
                 <div className='projects-tabs'>
                     <ul>
-                        <li onClick={e => {handleTabChange('Professional')}}>Professional</li>
-                        <li onClick={e => {handleTabChange('Personal')}}>Personal</li>
-                        <li onClick={e => {handleTabChange('POC')}}>POC</li>
+                        <li onClick={e => {handleTabChange('Professional', e)}}>Professional</li>
+                        <li onClick={e => {handleTabChange('Personal', e)}}>Personal</li>
+                        <li onClick={e => {handleTabChange('POC', e)}}>POC</li>
                     </ul>
                 </div>
                 <div className='projects-container'>
