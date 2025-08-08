@@ -9,12 +9,16 @@ import { GitHub, Link, LinkedIn } from '@mui/icons-material';
 const Projects = () => {
     const [section, setSection] = React.useState('Professional');
 
-    const handleTabChange = (tab, e) => {
-        setSection(tab);
-        e.parentNode.getElementByTagName('li').array.forEach(element => {
-            element.removeProperty('border')
+    function removeActiveClass(){
+        const list = document.querySelectorAll('.list')
+        list.forEach(element => {
+            element.classList.remove('active-list')
         });
-        e.target.style.border = '2px solid var(--home-screen-text-color)';
+    }
+    const handleTabChange = (tab, e) => {
+        removeActiveClass();
+        e.target.classList.add('active-list')
+        setSection(tab)
     }
 
     return (
@@ -23,9 +27,9 @@ const Projects = () => {
             <div className='projects-layout'>
                 <div className='projects-tabs'>
                     <ul>
-                        <li onClick={e => {handleTabChange('Professional', e)}}>Professional</li>
-                        <li onClick={e => {handleTabChange('Personal', e)}}>Personal</li>
-                        <li onClick={e => {handleTabChange('POC', e)}}>POC</li>
+                        <li onClick={e => {handleTabChange('Professional', e)}} className='list active-list'>Professional</li>
+                        <li onClick={e => {handleTabChange('Personal', e)}} className='list'>Personal</li>
+                        <li onClick={e => {handleTabChange('POC', e)}} className='list'>POC</li>
                     </ul>
                 </div>
                 <div className='projects-container'>

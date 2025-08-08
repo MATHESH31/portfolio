@@ -113,3 +113,7 @@
 .card-container:hover .card-overlay {
     display: block;
 }
+
+.active-list {
+    border: 2px solid var(--home-screen-text-color)
+}
