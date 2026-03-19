@@ -56,7 +56,7 @@ const Skills = () => {
         width: '25vw',
         top: '35vh',
         left: '10vw',
-        height: '40vh',
+        // height: '40vh',
         textAlign: 'center'
     }
 
@@ -64,7 +64,6 @@ const Skills = () => {
         position: 'absolute',
         width: '25vw',
         bottom: '10vh',
-        transform: 'translateX(-50%)',
         textAlign: 'center'
     }
 
@@ -93,12 +92,12 @@ const Skills = () => {
                     </h1>
                 </div>
                 <div className='skills-grid'>
-                    <Grid container spacing={2} rowSpacing={3} sx={leftGridStyling}>
+                    <Grid container spacing={4} rowSpacing={3} sx={leftGridStyling}>
                         <Typography sx={{
                             position: 'absolute',
                             top: '-7vh',
-                            right: '8vw',
-                            fontSize: '2rem',
+                            left: '10vw',
+                            fontSize: '2.5rem',
                             fontFamily: 'var(--para-font-family)',
                             color: 'var(--home-screen-text-color)',
                             fontWeight: '700'
@@ -106,22 +105,27 @@ const Skills = () => {
                         {
                             frontEndSkills.map(skill => (
                                 <Grid item xs={4} md={4} lg={4}>
-                                    <img src={skill.icon} alt={skill.name} style={{
-                                        height: '5vh',
-                                        marginBottom: '1vh',
-                                        filter: `drop-shadow(0.5vw 0.5vh 1.5vh ${skill.learning ? 'green' : 'blue'})`
-                                    }}/>
-                                    <h1>{skill.name}</h1>
+                                    <div className='skill-box' style={{
+                                        boxShadow: `0.2vw 0.2vh 2vh ${skill.learning ? 'green' : 'blue'}`
+                                    }}>
+                                        <img src={skill.icon} alt={skill.name} style={{
+                                            height: '5vh',
+                                            marginBottom: '0.5vh',
+                                        }}/>
+                                        <h1>{skill.name}</h1>
+                                    </div>
                                 </Grid>
                             ))
                         }
                     </Grid>
-                    <Grid container spacing={2} rowSpacing={3} sx={middleGridStyling}>
+                </div>
+                <div className='skills-grid'>
+                    <Grid container spacing={4} rowSpacing={3} sx={middleGridStyling}>
                         <Typography sx={{
                             position: 'absolute',
                             top: '-7vh',
-                            left: '8vw',
-                            fontSize: '2rem',
+                            left: '7vw',
+                            fontSize: '2.5rem',
                             fontFamily: 'var(--para-font-family)',
                             color: 'var(--home-screen-text-color)',
                             fontWeight: '700'
@@ -129,22 +133,27 @@ const Skills = () => {
                         {
                             opsSkills.map(skill => (
                                 <Grid item sx={4} md={4} lg={4}>
-                                    <img src={skill.icon} alt={skill.name} style={{
-                                        height: '5vh',
-                                        marginBottom: '1vh',
-                                        filter: `drop-shadow(0.5vw 0.5vh 1.5vh ${skill.learning ? 'green' : 'blue'})`
-                                    }}/>
-                                    <h1>{skill.name}</h1>
+                                    <div className='skill-box' style={{
+                                        boxShadow: `0.2vw 0.2vh 2vh ${skill.learning ? 'green' : 'blue'}`
+                                    }}>
+                                        <img src={skill.icon} alt={skill.name} style={{
+                                            height: '5vh',
+                                            marginBottom: '0.5vh',
+                                        }}/>
+                                        <h1>{skill.name}</h1>
+                                    </div>
                                 </Grid>
                             ))
                         }
                     </Grid>
-                    <Grid container spacing={2} rowSpacing={3} sx={rightGridStyling} justifyContent='flex-end'>
+                </div>
+                <div className='skills-grid'>
+                    <Grid container spacing={4} rowSpacing={3} sx={rightGridStyling} justifyContent='flex-end'>
                         <Typography sx={{
                             position: 'absolute',
                             top: '-7vh',
-                            left: '9vw',
-                            fontSize: '2rem',
+                            left: '8vw',
+                            fontSize: '2.5rem',
                             fontFamily: 'var(--para-font-family)',
                             color: 'var(--home-screen-text-color)',
                             fontWeight: '700'
@@ -152,12 +161,15 @@ const Skills = () => {
                         {
                             backEndSkills.map(skill => (
                                 <Grid item xs={4} md={4} lg={4}>
-                                    <img src={skill.icon} alt={skill.name} style={{
-                                        height: '5vh',
-                                        marginBottom: '1vh',
-                                        filter: `drop-shadow(0.5vw 0.5vh 1.5vh ${skill.learning ? 'green' : 'blue'})`
-                                    }}/>
-                                    <h1>{skill.name}</h1>
+                                    <div className='skill-box' style={{
+                                        boxShadow: `0.2vw 0.2vh 2vh ${skill.learning ? 'green' : 'blue'}`
+                                    }}>
+                                        <img src={skill.icon} alt={skill.name} style={{
+                                            height: '5vh',
+                                            marginBottom: '0.5vh',
+                                        }}/>
+                                        <h1>{skill.name}</h1>
+                                    </div>
                                 </Grid>
                             ))
                         }

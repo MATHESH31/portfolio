@@ -12,7 +12,7 @@ const About = () => {
             <AppBar />
             <div className='about-contents'>
                 <h1 className='name'>Mathesh Nagendran</h1>
-                <h1 className='role'>Software Developer</h1>
+                <h1 className='role'>Systems Analyst</h1>
                 <div className='left-content-box'>
                     <h1 className='greetings'>Hey there!</h1>
                     <p className='my-self'>
@@ -28,6 +28,8 @@ const About = () => {
                         color: 'var(--home-screen-text-color)',
                         marginLeft: '0.5rem',
                         fontSize: '1.2rem',
+                        background: 'none',
+                        borderRadius: '50vw',
                         border: '0.1rem solid var(--home-screen-text-color)',
                         
                     }} onClick={() => {navigate('/contact')}}>
@@ -41,12 +43,12 @@ const About = () => {
                 <div className='right-content-box'>
                     <div className='experience'>
                         <h1>Experience</h1>
-                        <h3>3 years</h3>
+                        <h3>3 YEARS</h3>
                     </div>
                     <div className='projects-worked' onClick={() => {navigate('/projects')}}>
                         <h1>Projects Worked</h1>
-                        <h3>4 - internal</h3>
-                        <h3>5 - personal</h3>
+                        <h3>4 - PROFESSIONAL</h3>
+                        <h3>5 - PERSONAL</h3>
                         <h3>3 - POC</h3>
                     </div>
                 </div>

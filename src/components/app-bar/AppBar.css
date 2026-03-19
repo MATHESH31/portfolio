@@ -31,6 +31,5 @@
 }
 
 .active {
-    border-radius: 2vw;
-    background-color: var(--intro-bg-color);
+    text-decoration: underline;
 }

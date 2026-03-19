@@ -37,15 +37,32 @@
 }
 
 .skills-header h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
     color: var(--intro-text-color);
     margin: 0;
     padding: 0.5rem;
     font-family: var(--para-font-family);
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0.5vw 1vh 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box {
+    padding: 10%;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 2vw;
+}
+
+@media (min-width: 1400px) {
+    .skill-box {
+        min-width: 7.5vw;
+        min-height: 15vh;
+    }
+}
+    
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills-grid h1 {
@@ -53,9 +70,6 @@
     text-align: center;
     margin: 0;
     padding: 0.6vh 0 0.6vh 0;
-    border-radius: 2vw;
     color: var(--intro-text-color);
     font-family: var(--para-font-family);
-    background: rgba(255, 255, 255, 0.20);
-    box-shadow: 0.5vw 1vh 20px rgba(0, 0, 0, 0.2);
 }

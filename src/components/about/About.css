@@ -24,7 +24,7 @@
     font-size: 6rem;
     font-family: var(--name-font-family);
     font-style: italic;
-    color: var(--intro-text-color);
+    color: var(--home-screen-text-color);
     position: absolute;
     top: 28vh;
 }
@@ -46,6 +46,7 @@
 
 .greetings {
     font-family: var(--para-font-family);
+    color: var(--intro-text-color);
     font-size: 3rem;
     font-weight: 200;
     margin-left: 1vh;
@@ -100,6 +101,7 @@
     font-size: 2.5rem;
     font-weight: 200;
     text-align: right;
+    color: var(--intro-text-color);
     margin: 0;
 }
 
