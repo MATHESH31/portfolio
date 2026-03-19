@@ -1,55 +1,53 @@
-import AppBar from '../app-bar/AppBar'
-import './Contact.css';
-import { GitHub, Instagram, LinkedIn } from '@mui/icons-material';
+import './Contact.css'
+import { GitHub, Instagram, LinkedIn, MailOutline } from '@mui/icons-material'
 import myAnimatedImage from '../../assets/mathesh_nagendran_animated.png'
-import { vh } from 'framer-motion';
+
+const socialLinks = [
+    {
+        label: 'GitHub',
+        href: 'https://github.com/MATHESH31',
+        icon: <GitHub />,
+    },
+    {
+        label: 'LinkedIn',
+        href: 'https://www.linkedin.com/in/mathesh-nagendran-4a636097/',
+        icon: <LinkedIn />,
+    },
+    {
+        label: 'Instagram',
+        href: 'https://www.instagram.com/_m.a.t.h.e.z.h_/',
+        icon: <Instagram />,
+    },
+]
 
 const Contact = () => {
-    const gitStyle = {
-        height: '8vh',
-        width: '8vw',
-        color: 'var(--home-screen-text-color)',
-    }
-
-    const linkedInStyle = {
-        height: '8vh',
-        width: '8vw',
-        color: 'var(--home-screen-text-color)',
-    }
-
-    const instaStyle = {
-        height: '8vh',
-        width: '8vw',
-        color: 'var(--home-screen-text-color)',
-    }
-
     return (
-        <div>
-            <AppBar />
-            <div className='contact-layout'>
-                <img src={myAnimatedImage} className='animated-portrait' />
-                <div className='contact-content-one'>
-                    <h1 className='git'>GET IN TOUCH</h1>
-                    <a className='mail' href='mailto:mathezh1@gmail.com'>
+        <section className="contact-page">
+            <div className="contact-panel section-panel">
+                <div className="contact-panel__content">
+                    <span className="section-kicker">Contact</span>
+                    <h1 className="section-heading">Open to backend roles, product engineering opportunities, and collaboration.</h1>
+                    <p className="section-copy">For professional inquiries, feel free to reach out by email or connect through the platforms below.</p>
+                    <a className="contact-panel__email" href="mailto:mathezh1@gmail.com">
+                        <MailOutline />
                         mathezh1@gmail.com
                     </a>
+                    <div className="contact-panel__socials">
+                        {socialLinks.map((link) => (
+                            <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="contact-panel__social-link">
+                                {link.icon}
+                                {link.label}
+                            </a>
+                        ))}
+                    </div>
                 </div>
-                <div className='contact-content-two'>
-                    <h1 className='also'>ALSO CHECK</h1>
-                    <div className='icons'>
-                        <a href='https://github.com/MATHESH31' target="_blank">
-                            <GitHub sx={gitStyle} />
-                        </a>
-                        <a href='https://www.linkedin.com/in/mathesh-nagendran-4a636097/' target='_blank'>
-                            <LinkedIn sx={linkedInStyle} />
-                        </a>
-                        <a href='https://www.instagram.com/_m.a.t.h.e.z.h_/' target="_blank">
-                            <Instagram sx={instaStyle}/>
-                        </a>
+                <div className="contact-panel__visual">
+                    <div className="contact-panel__visual-frame">
+                        <img src={myAnimatedImage} alt="Animated portrait of Mathesh Nagendran" className="contact-panel__image" />
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

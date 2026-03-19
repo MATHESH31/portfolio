@@ -1,57 +1,88 @@
-import './About.css';
-import Button from '@mui/joy/Button';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import myImage from '../../assets/mathesh_nagendran.svg';
-import AppBar from '../app-bar/AppBar';
-import { useNavigate } from 'react-router-dom';
+import Button from '@mui/joy/Button'
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline'
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+import myImage from '../../assets/mathesh_nagendran.svg'
+import './About.css'
+import { useNavigate } from 'react-router-dom'
+
+const focusAreas = ['Java', 'Spring', 'React', 'Kafka', 'MongoDB', 'Docker', 'Jenkins']
+
+const stats = [
+    {
+        title: 'Experience',
+        value: '3+ years',
+        description: 'Building backend-heavy applications in product environments.',
+        icon: <WorkOutlineIcon />,
+    },
+    {
+        title: 'Project mix',
+        value: '12 builds',
+        description: 'Internal delivery, personal products, and proof-of-concept engineering.',
+        icon: <RocketLaunchIcon />,
+    },
+]
 
 const About = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+
     return (
-        <div className='about-layout'>
-            <AppBar />
-            <div className='about-contents'>
-                <h1 className='name'>Mathesh Nagendran</h1>
-                <h1 className='role'>Software Developer</h1>
-                <div className='left-content-box'>
-                    <h1 className='greetings'>Hey there!</h1>
-                    <p className='my-self'>
-                        I’m a backend-focused Developer, currently extending my skills by exploring ReactJS.
+        <section className="about-page">
+            <div className="about-hero">
+                <div className="about-hero__content">
+                    <span className="section-kicker">Software Developer</span>
+                    <h1 className="section-heading about-hero__title">Software Developer focused on backend systems and modern web applications.</h1>
+                    <p className="section-copy about-hero__copy">
+                        I work primarily with Java and Spring-based technologies, building reliable backend services for
+                        product environments and business-critical workflows.
                     </p>
-                    <p className='my-self'>
-                        I also explored a bit of devops and big data.
+                    <p className="section-copy about-hero__copy">
+                        My experience includes IoT platforms, system integrations, rule evaluation, and data-oriented
+                        applications, with growing frontend experience in React.
                     </p>
-                    <p className='my-self'>
-                        Currently, I work at Bluenett (formerly Lantrasoft) an IoT-based product company.
-                    </p>
-                    <Button className="left-button" variant='plain' style={{
-                        color: 'var(--home-screen-text-color)',
-                        marginLeft: '0.5rem',
-                        fontSize: '1.2rem',
-                        border: '0.1rem solid var(--home-screen-text-color)',
-                        
-                    }} onClick={() => {navigate('/contact')}}>
-                        Get in touch <ArrowForwardIcon />
-                    </Button>
-                </div>
-                <div className="oli-vattam"></div>
-                <div className='portrait'>
-                    <img src={myImage} />
-                </div>
-                <div className='right-content-box'>
-                    <div className='experience'>
-                        <h1>Experience</h1>
-                        <h3>3 years</h3>
+                    <div className="about-hero__actions">
+                        <Button
+                            className="about-hero__button about-hero__button--primary"
+                            onClick={() => navigate('/projects')}
+                            endDecorator={<ArrowForwardIcon />}
+                        >
+                            View projects
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            className="about-hero__button about-hero__button--secondary"
+                            onClick={() => navigate('/contact')}
+                        >
+                            Get in touch
+                        </Button>
                     </div>
-                    <div className='projects-worked' onClick={() => {navigate('/projects')}}>
-                        <h1>Projects Worked</h1>
-                        <h3>4 - internal</h3>
-                        <h3>5 - personal</h3>
-                        <h3>3 - POC</h3>
+                    <ul className="pill-list">
+                        {focusAreas.map((area) => (
+                            <li key={area}>{area}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="about-hero__visual section-panel">
+                    <div className="about-hero__image-wrap">
+                        <img src={myImage} alt="Portrait of Mathesh Nagendran" className="about-hero__image" />
+                    </div>
+                    <div className="about-hero__intro-card">
+                        <p>Currently working at Bluenett, formerly Lantrasoft</p>
+                        <p>Backend development, integrations, and full-stack growth</p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="about-stats">
+                {stats.map((stat) => (
+                    <article key={stat.title} className="about-stat-card section-panel">
+                        <div className="about-stat-card__icon">{stat.icon}</div>
+                        <p className="about-stat-card__label">{stat.title}</p>
+                        <h2>{stat.value}</h2>
+                        <p className="about-stat-card__copy">{stat.description}</p>
+                    </article>
+                ))}
+            </div>
+        </section>
     )
 }
 

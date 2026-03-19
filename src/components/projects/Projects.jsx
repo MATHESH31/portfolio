@@ -1,98 +1,84 @@
 import React from 'react'
-import AppBar from '../app-bar/AppBar'
-import './Projects.css';
-import { Grid } from '@mui/joy';
-import { Chip } from '@mui/material';
+import './Projects.css'
 import projectJson from '../../staticData/projects.json'
-import { GitHub, Link, LinkedIn } from '@mui/icons-material';
+import { GitHub, Language, LinkedIn } from '@mui/icons-material'
+
+const sections = ['Professional', 'Personal', 'POC']
 
 const Projects = () => {
-    const [section, setSection] = React.useState('Professional');
+    const [section, setSection] = React.useState('Professional')
 
-    function removeActiveClass(){
-        const list = document.querySelectorAll('.list')
-        list.forEach(element => {
-            element.classList.remove('active-list')
-        });
-    }
-    const handleTabChange = (tab, e) => {
-        removeActiveClass();
-        e.target.classList.add('active-list')
-        setSection(tab)
-    }
+    const filteredProjects = projectJson.filter((project) => project.type === section)
 
     return (
-        <div>
-            <AppBar />
-            <div className='projects-layout'>
-                <div className='projects-tabs'>
-                    <ul>
-                        <li onClick={e => {handleTabChange('Professional', e)}} className='list active-list'>Professional</li>
-                        <li onClick={e => {handleTabChange('Personal', e)}} className='list'>Personal</li>
-                        <li onClick={e => {handleTabChange('POC', e)}} className='list'>POC</li>
-                    </ul>
-                </div>
-                <div className='projects-container'>
-                    <Grid container spacing={4}>
-                    {
-                            projectJson.filter(project => project.type === section).map(project => (
-                                <Grid item xs={12} sm={6} md={4} key={project.title}>
-                                    <div className='card-container'>
-                                        <div className='card' >
-                                            <h1>{project.title}</h1>
-                                            <p>{project.description}</p>
-                                            <div className='tech-stack'>
-                                                {
-                                                    project.techStack.map((tech, index) => (
-                                                        <Chip label={tech} key={index} component={'span'} /> 
-                                                    ))
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className='card-overlay'>
-                                            <div className='overlay-content'>
-                                                {
-                                                    project.linkedInLink !== '' ? (
-                                                        <a href={project.linkedInLink} target='_blank'>
-                                                            <LinkedIn sx={{
-                                                                fontSize: '6rem',
-                                                                color: 'var(--intro-text-color)'
-                                                            }}/>
-                                                        </a>
-                                                     ) : project.githubLink.length == 0 && project.url === ''
-                                                     ? <p className='unavailable-link'>No links available</p>
-                                                     : null
-                                                }
-                                                {
-                                                    project.url !== '' ? (
-                                                        <a href={project.url} target='_blank'>
-                                                            <Link sx={{
-                                                                fontSize: '6rem',
-                                                                color: 'var(--intro-text-color)'
-                                                            }}/>
-                                                        </a>
-                                                    ) : null
-                                                }
-                                                {
-                                                    project.githubLink.map(link => (
-                                                        <a href={link} target='_blank'>
-                                                            <GitHub sx={{
-                                                                fontSize: '6rem',
-                                                                color: 'var(--intro-text-color)'
-                                                            }}/>
-                                                        </a>
-                                                    )) 
-                                                }
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Grid>
-                            ))
-                        }
-                    </Grid>
-                </div>
+        <section className="projects-page">
+            <div className="projects-page__header">
+                <span className="section-kicker">Selected Work</span>
+                <h1 className="section-heading">Selected projects across professional work, personal builds, and experiments.</h1>
+                <p className="section-copy">A mix of product delivery, independent development, and technical exploration.</p>
             </div>
-        </div>
+
+            <div className="projects-tabs section-panel" role="tablist" aria-label="Project categories">
+                {sections.map((tab) => (
+                    <button
+                        key={tab}
+                        type="button"
+                        role="tab"
+                        aria-selected={section === tab}
+                        className={`projects-tabs__button ${section === tab ? 'is-active' : ''}`}
+                        onClick={() => setSection(tab)}
+                    >
+                        {tab}
+                    </button>
+                ))}
+            </div>
+
+            <div className="projects-grid">
+                {filteredProjects.map((project) => {
+                    const hasLinks = Boolean(project.linkedInLink || project.url || project.githubLink.length)
+
+                    return (
+                        <article key={project.title} className="project-card section-panel">
+                            <div className="project-card__header">
+                                <span className="project-card__type">{project.type}</span>
+                                <h2>{project.title}</h2>
+                            </div>
+                            <div className="project-card__body">
+                                <p className="project-card__description">{project.description}</p>
+                                <div className="project-card__stack">
+                                    {project.techStack.map((tech) => (
+                                        <span key={tech} className="project-card__tech">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="project-card__links">
+                                {project.linkedInLink && (
+                                    <a href={project.linkedInLink} target="_blank" rel="noreferrer" className="project-card__link">
+                                        <LinkedIn fontSize="small" />
+                                        LinkedIn
+                                    </a>
+                                )}
+                                {project.url && (
+                                    <a href={project.url} target="_blank" rel="noreferrer" className="project-card__link">
+                                        <Language fontSize="small" />
+                                        Live link
+                                    </a>
+                                )}
+                                {project.githubLink.map((link, index) => (
+                                    <a key={`${project.title}-${index}`} href={link} target="_blank" rel="noreferrer" className="project-card__link">
+                                        <GitHub fontSize="small" />
+                                        GitHub {project.githubLink.length > 1 ? index + 1 : ''}
+                                    </a>
+                                ))}
+                                {!hasLinks && <span className="project-card__link project-card__link--muted">Private or internal work</span>}
+                            </div>
+                        </article>
+                    )
+                })}
+            </div>
+        </section>
     )
 }
 

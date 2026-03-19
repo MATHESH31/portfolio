@@ -1,13 +1,55 @@
-:root{
-    --intro-bg-color: #1B3C53;
-    --intro-text-color: #D2C1B6;
-    --home-screen-bg: #456882;
-    --home-screen-text-color: #F9F3EF;
-    --name-font-family: 'Nexa', sans-serif;
-    --para-font-family: 'Capriola', sans-serif;
+:root {
+    --bg-base: #0b1620;
+    --bg-secondary: #102433;
+    --surface: rgba(8, 15, 22, 0.72);
+    --surface-elevated: linear-gradient(180deg, rgba(20, 35, 49, 0.9) 0%, rgba(10, 20, 30, 0.92) 100%);
+    --surface-muted: rgba(255, 255, 255, 0.06);
+    --border-soft: rgba(210, 193, 182, 0.16);
+    --text-strong: #f8efe9;
+    --text-base: #e5d8ce;
+    --text-muted: #adc2d0;
+    --accent: #7bb097;
+    --accent-warm: #e0c495;
+    --accent-strong: #9bc9b2;
+    --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.3);
+    --font-display: "Avenir Next", "Segoe UI", sans-serif;
+    --font-body: "Trebuchet MS", "Gill Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    color: var(--text-base);
+    background:
+        radial-gradient(circle at top left, rgba(123, 176, 151, 0.14), transparent 26%),
+        radial-gradient(circle at 85% 20%, rgba(224, 196, 149, 0.14), transparent 18%),
+        linear-gradient(180deg, #102433 0%, #0b1620 48%, #091018 100%);
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 #root {
-    background-color: var(--intro-bg-color);
-    height: 100vh;
+    min-height: 100vh;
 }

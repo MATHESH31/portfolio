@@ -109,5 +109,14 @@
             "https://github.com/MATHESH31/hudi"
         ],
         "url": ""
+    },
+    {
+        "title": "Clickhouse Analytics storage",
+        "type": "POC",
+        "description": "Created and ingestion layer which throughs the data from message buffers to the clickhouse database and the stored data is use for analytics.",
+        "techStack": ["Kafka", "Kafka-connect", "Clickhouse"],
+        "linkedInLink": "",
+        "githubLink": [],
+        "url": ""
     }
 ]
